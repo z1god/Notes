@@ -1,0 +1,26 @@
+1. Deepen BI with Advanced Qlik & Beyond
+Upskill in Qlik Cloud, Qlik Catalog, Qlik Compose, and Qlik Automations—these newer tools are gaining traction post‑2023 acquisitions 
+Wikipedia
+.
+
+Add data engineering chops: SQL, performance optimization, complex data modeling, ETL design.
+
+Expand to other BI tools (Tableau, Power BI) to avoid being pigeon‑holed as a “Qlik-only” dev 
+
+
+2. Shift Into Data Engineering or Analytics
+Learn Python (pandas, NumPy, PySpark) and SQL-based orchestration (e.g., Airflow).
+
+Embrace cloud platforms: AWS/Azure/GCP, plus frameworks like Databricks, Snowflake, Spark.
+
+3. Certifications & Projects
+Acquire certifications: Microsoft Certified Data Engineer, Databricks, AWS Certified Data Analytics, etc.
+
+Build solid portfolio projects on real-world challenges and public datasets—get feedback and show results 
+Reddit
+.
+
+4. Prepare for Tech Interviews
+Practice coding (Python, SQL), system design, scenario-based BI/data engineering questions.
+
+Highlight successful use cases: e.g. migration of Crystal Reports to Qlik Sense, optimizing reload performance, etc.

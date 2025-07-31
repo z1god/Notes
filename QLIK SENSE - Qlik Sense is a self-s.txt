@@ -1,0 +1,32 @@
+QLIK SENSE - Qlik Sense is a self-service BI and data visualization tool. It supports responsive design, drag-and-drop UI, governed self-service, and better integration with modern web tech.
+
+Dimensions are fields used to slice data (e.g., Product, Region).
+
+Measures are numeric values to be aggregated (e.g., Sales, Profit).
+
+
+Different Types of Loads -
+1. Inline Load - Used to input small datasets directly in the script—great for static lookup tables or manual entries.
+	
+LOAD * INLINE [  
+  A, B  
+  1, John  
+  2, Jane  
+];  
+
+
+2. Resident Load - Loads data already in memory, enabling further transformations without re-fetching from source. We cannot assign sum and other aggregate functions in a load statement directly to solve this we use Resident load.
+
+SalesAgg:  
+LOAD CustomerID, sum(Sales) as TotalSales  
+RESIDENT Sales; 
+
+
+3. Incremental Load
+4. Partial Reload
+5. Binary Load
+6. Buffer Load
+7. Add Load
+8. Preceding Load
+9. Generic Load
+10. Mapping Load (ApplyMap)
