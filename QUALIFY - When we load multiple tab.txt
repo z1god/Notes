@@ -1,0 +1,41 @@
+QUALIFY - When we load multiple tables, Qlik automatically associates fields with the same name. If we want to avoid this automatic association, we can use QUALIFY.
+
+QUALIFY statement is used in the data load script to prevent automatic associations between tables by prefixing field names with the table name.
+
+QUALIFY CustomerID;
+
+LOAD CustomerID, ProductID, Sales FROM SalesTable;
+
+LOAD CustomerID, Region FROM CustomerTable;
+
+
+-> SalesTable.CustomerID
+
+-> CustomerTable.CustomerID
+
+
+
+SYNTHETIC KEYS - Synthetic keys are automatically generated when two or more tables share multiple common fields. Instead of creating ambiguous associations, Qlik creates a new synthetic table (named like **$Syn 1**) that contains the combinations of the common key fields.
+DISADV -  Increase memory usage and slow down data loading and processing. 
+	  Indicate a poorly designed data model.
+
+Resolving Synthetic Keys - Rename fields
+		           Use a concatenated key manually
+			   Resolve data model logic — consider if those fields should really be in both tables.
+
+
+KEEP - It is used to filter two tables based on join logic without physically joining them. The tables remain separate in the data model.
+
+Sales:
+LOAD CustomerID, SalesAmount
+FROM Sales.qvd;
+
+INNER KEEP Customers:
+LOAD CustomerID, CustomerName
+FROM Customers.qvd;
+
+Only CustomerIDs that exist in both Sales and Customers will be kept.
+
+Syntax:  
+
+(inner | left | right) keep [(tablename ) ]( loadstatement | selectstatement )
